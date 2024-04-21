@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
+require("dotenv").config()
 
-const dburl = process.env.MONGOURL || `mongodb+srv://mrganeshofficial:${process.env.PASS}@cluster0.lonryxe.mongodb.net/taskManager`
+const dburl = process.env.MONGOURL || `mongodb://localhost:27017/taskManager`
 
 mongoose
-  .connect(dburl, {
+  .connect("mongodb+srv://mrganeshofficial:Ganesh622314@cluster0.lonryxe.mongodb.net/taskManager", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     family:4
